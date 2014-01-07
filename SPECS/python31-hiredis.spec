@@ -10,8 +10,8 @@
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 
 Name:           %{name}
-Version:        0.1.1
-Release:        2.ius%{?dist}
+Version:        0.1.2
+Release:        1.ius%{?dist}
 Summary:        Python extension that wraps hiredis
 
 Group:          Development/Languages
@@ -48,6 +48,9 @@ rm -rf %{buildroot}
 %{python_sitearch}/%{upstream_name}-%{version}-*.egg-info
 
 %changelog
+* Tue Jan 07 2014 Ben Harper <ben.harper@rackspace.com> - 0.1.2-1.ius
+- Latest sources from upstream
+
 * Tue Dec 04 2012 Ben Harper <ben.harper@rackspace.com> - 0.1.1-2.ius
 - adding Requires
 
